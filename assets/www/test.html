@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>MO</title>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"> </script>
+
+    <script src="jquery-1.10.1.min.js"> </script>
+    <script src="jquery-migrate-1.2.1.min.js"> </script>
+    <script src="jquery.mobile-1.3.2.js"> </script>
+
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.min.css" title="styletest" />
+    <link rel="stylesheet" href="jquery.mobile-1.3.2.css" />
+    <link href="css/mobipick.css" rel="stylesheet" type="text/css" />
+    <link href="demo/shCoreDefault.css" rel="stylesheet" type="text/css" />
+    <link href="demo/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="demo/shCore.js"></script>
+    <script type="text/javascript" src="demo/shBrushJScript.js"></script>
+    <script type="text/javascript" src="demo/shBrushXml.js"></script>
+    <script type="text/javascript" src="external/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="external/xdate.js"></script>
+    <script type="text/javascript" src="external/xdate.i18n.js"></script>
+    <script type="text/javascript" src="js/mobipick.js"></script>
+
+
+
+    <link rel="stylesheet" href="personalise.css" />
+    <!-- 
+  <link rel="stylesheet" type="text/css" href="libs/jqm-datebox.min.css" /> 
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+
+ Optional Mousewheel support: http://brandonaaron.net/code/mousewheel/docs 
+<script type="text/javascript" src="PATH/TO/YOUR/COPY/OF/jquery.mousewheel.min.js"></script>  
+<link rel='stylesheet' type='text/css' href='libs/css/smoothness/jquery-ui-1.8.11.custom.css' />
+
+
+<script type="text/javascript" src="libs/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.datebox.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.slidebox.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.durationbox.min.js"></script>
+<script type="text/javascript" src="libs/jquery.mobile.datebox.i18n.en_US.utf8.js"></script> -->
+    <script type='text/javascript' src='libs/jquery-1.4.4.min.js'></script>
+    <script type='text/javascript' src='libs/jquery-ui-1.8.11.custom.min.js'></script>
+    <script type="text/javascript" src="libs/date.js"></script>
+    <script type='text/javascript' src='jquery.weekcalendar.js'></script>
+    <link rel="stylesheet" href="jquery.weekcalendar.css" />
+    <link rel="stylesheet" type="text/css" href="libs/jquery.ptTimeSelect.css" />
+    <script type="text/javascript" src="libs/jquery.ptTimeSelect.js"></script>
+    <!-- 	<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.css" /> 
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.min.css" title="styletest" />-->
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <script>jQuery.noConflict();</script>
+    <script type="text/javascript">
+        $( document ).on( "pagecreate", "#disponibilite", function() {
+            SyntaxHighlighter.all();
+
+            var picker = $( "input[name='datemedecin']", this );
+
+            picker.mobipick();
+
+            picker.on( "change", function() {
+                var date = $( this ).val();
+
+                // formatted date					
+                var dateObject = $( this ).mobipick( "option", "date" );
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="home1" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div data-role="header">
+            <h1>&nbsp;</h1>
+        </div>
+
+       <div id="accueilC" data-role="content">
+
+          
+            <img id="compte" class="imgCompte" onclick="monCompte()" src="images/moncompte.png" alt="Mon compte" width="20%" />
+            <label class="description"  for="1" onclick="decrireMO()">En quelques MO ...</label>
+            <label class="MassageBien"   onclick="MassageBienEtre()">Massage de bien etre</label>
+
+            
+            <img id="motif" class="motif"  src="images/motif.png" alt="Logo MO" width="80%" />
+            <label class="Osteopathie" for="1"  onclick="osteopathie()">Osteopathie</label>
+            <label class="tarifs" for="1"  onclick="tarif()">Tarifs</label>
+          
+            <a href="tel:0752376821" id="tel" >
+                <img class="tel" src="images/tel.png" onclick="telephoner()" alt="Telephoner" width="10%" /></a>
+
+           <a href="mailto:chourasleh@gmail.com" >
+           
+            <img id="mail" class="mail"  width="10%" src="images/mail.png" onclick="envoyerMail()" alt="envoyer mail"  />
+</a>
+
+        </div>
+    </div>
+    
+</body>
+
+</html>

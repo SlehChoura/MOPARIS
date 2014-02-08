@@ -1,0 +1,1505 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>MO</title>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"> </script>
+
+    <script src="jquery-1.10.1.min.js"> </script>
+    <script src="jquery-migrate-1.2.1.min.js"> </script>
+    <script src="jquery.mobile-1.3.2.js"> </script>
+	<script src="jquery.validate.min.js"> </script>
+    <!--  <link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.min.css" title="styletest" />   -->
+    <link rel="stylesheet" href="jquery.mobile-1.3.2.css" />
+    <link href="css/mobipick.css" rel="stylesheet" type="text/css" />
+    <link href="demo/shCoreDefault.css" rel="stylesheet" type="text/css" />
+    <link href="demo/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="demo/shCore.js"></script>
+    <script type="text/javascript" src="demo/shBrushJScript.js"></script>
+    <script type="text/javascript" src="demo/shBrushXml.js"></script>
+    <script type="text/javascript" src="external/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="external/xdate.js"></script>
+    <script type="text/javascript" src="external/xdate.i18n.js"></script>
+    <script type="text/javascript" src="js/mobipick.js"></script>
+
+
+
+    <!-- 
+  <link rel="stylesheet" type="text/css" href="libs/jqm-datebox.min.css" /> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+<script type="text/javascript" src="PATH/TO/YOUR/COPY/OF/jquery.mousewheel.min.js"></script>  
+<link rel='stylesheet' type='text/css' href='libs/css/smoothness/jquery-ui-1.8.11.custom.css' />
+<script type="text/javascript" src="libs/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.datebox.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.slidebox.min.js"></script>
+<script type="text/javascript" src="libs/jqm-datebox.mode.durationbox.min.js"></script>
+<script type="text/javascript" src="libs/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+  
+
+   -->
+  
+  
+  <script type='text/javascript' src='libs/jquery-1.7.2.min.js'></script>
+    <script type='text/javascript' src='libs/jquery-ui-1.8.11.custom.min.js'></script>
+    <script type="text/javascript" src="libs/date.js"></script>
+    <script type='text/javascript' src='jquery.weekcalendar.js'></script>
+    <link rel="stylesheet" href="jquery.weekcalendar.css" />
+
+    <link rel="stylesheet" type="text/css" href="libs/jquery.ptTimeSelect.css" />
+    <script type="text/javascript" src="libs/jquery.ptTimeSelect.js"></script>
+  <!-- 		
+	      <link type="text/css" href="css/bootstrap-timepicker.css" />
+        <link type="text/css" href="css/bootstrap-responsive.css" />
+        <link type="text/css" href="css/bootstrap-timepicker.min.css" />
+        <script type="text/javascript" src="js/bootstrap-timepicker.js"></script>
+        <script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script>-->
+    <!-- 	<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.css" /> 
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.min.css" title="styletest" />-->
+	 <script type="text/javascript" src="jquery.timepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.timepicker.css" />
+
+  <script type="text/javascript" src="lib/base.js"></script>
+  
+	
+	
+    <link rel="stylesheet" type="text/css" href="test.css" />
+	 <link rel="stylesheet" href="personalise.css" />
+   
+    <script>jQuery.noConflict();</script>
+    <script type="text/javascript">
+        $( document ).on( "pagecreate", "#disponibilite", function() {
+            SyntaxHighlighter.all();
+
+            var picker = $( "input[name='datemedecin']", this );
+
+            picker.mobipick();
+
+            picker.on( "change", function() {
+                var date = $( this ).val();
+
+                // formatted date					
+                var dateObject = $( this ).mobipick( "option", "date" );
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="home1" data-role="page"  data-cache-dom="true">
+
+       
+
+        <div id="demo1" data-role="content">
+
+          
+	 <img id="help1"  width="12px"    class="helpdemo" src="images/demo1.png" alt="Logo Air France"  />
+           
+            <img  class="imagedemo1"  id="logo1" onclick="testtest()"  src="images/doctor.png" alt="Logo Air France" width="35%" height="25%" />
+<div class="btn1" data-role="controlgroup" data-type="horizontal">           
+		   <a id="connexion" onclick="directementAide()" data-role="button" data-mini="false"  data-corners="false">connexion</a>
+            <a  id="creation compte" href="#creation" data-mini="false" data-role="button"  data-corners="false">creer un compte</a>
+</div>       
+	   </div>
+    </div>
+    <div id="home2" data-role="page"  data-cache-dom="true">
+        
+        <div id="demo2" data-role="content">
+           
+ 	 <img id="help1"  width="12px"    class="helpdemo" src="images/demo2.png" alt="Logo Air France"  />
+
+ <img id="logo" class="imagedemo2" src="images/democalendrier.png" alt="Logo Air France" width="65%" height="65%" / >
+             <!-- <div class="rdv" > <h2 align="center" > Ajouter un rendez-vous</h2 > <label class="detail" for="1" > Le client peut choisir la plage horaire de son rendez-vous a partir du calendrier qui affiche la disponibilite des practicians</label > </div >-->
+             <div class="btn1" data-role="controlgroup" data-type="horizontal">           
+
+         <a  id="connexion" onclick="directementAide()" data-role="button" data-mini="false" data-inline="true" data-corners="false">conexion</a>
+         <a   id="creation compte" href="#creation" data-mini="false" data-role="button" data-inline="true" data-corners="false">creer un compte</a>
+</div>
+     </div>
+     <!--  
+       <div    data-role="footer">
+        <div id"boutton" data-role="content"> <a id="changePageButton" data-role="button">Change Page!</a>
+        </div>
+         </div>
+                -->
+
+        </div>
+
+        <div id="home3" data-role="page"  data-cache-dom="true">
+
+          
+
+            <div id="demo3" data-role="content">
+
+               
+            </script>
+				 <img id="help1"  width="12px"   class="helpdemo" src="images/demo3.png" alt="Logo Air France"  />
+
+            <img id="logo" class="imagedemo3" src="images/doctor.png" alt="Logo Air France" width="35%" height="25%" />
+            <div class="rdv">
+                <h2 align="center">Confirmer le paiement</h2>
+
+                <p class="textjustifie">
+                    Pas besoin d’espèces sur vous au moment du rdv, le montant de votre séance sera prélevé sur votre
+				carte bancaire préalablement enregistrée et une facture vous sera envoyée par mail une fois la séance effectuée
+                </p>
+            </div>
+             <div class="btn1" data-role="controlgroup" data-type="horizontal">           
+            <a  id="connexion" onclick="directementAide()" data-role="button"   data-corners="false">conexion</a>
+            <a  id="creation compte" href="#creation"  data-role="button"  data-corners="false">creer un compte</a>
+			</div>
+        </div>
+        <!--  
+          <div    data-role="footer">
+           <div id"boutton" data-role="content"> <a id="changePageButton" data-role="button">Change Page!</a>
+           </div>
+            </div>
+            -->
+
+    </div>
+    <div id="home4" data-role="page"  data-cache-dom="true">
+
+       
+
+        <div id="demo4" data-role="content">
+
+           
+				 <img id="help1"   width="12px"    class="helpdemo" src="images/demo4.png" alt="Logo Air France"  />
+
+            <img id="logo" class="imagedemo3" src="images/doctor.png" alt="Logo Air France" width="35%" height="25%" />
+            <div class="rdv">
+                <h2 align="center">Laissez vous faire</h2>
+
+                <p class="textjustifie">
+                    Allongé sur un épais futon de coton bio ou bien sur une table d’ostéopathe, 
+				détendez vous un moment et profitez de l’excellence de MO
+                </p>
+            </div>
+             <div class="btn1" data-role="controlgroup" data-type="horizontal">           
+
+            <a  id="connexion" onclick="directementAide()" data-role="button" data-mini="false" data-inline="true" data-corners="false">conexion</a>
+            <a  id="creation compte" href="#creation" data-mini="false" data-role="button" data-inline="true" data-corners="false">creer un compte</a>
+</div>
+        </div>
+        <!--  
+          <div    data-role="footer">
+           <div id"boutton" data-role="content"> <a id="changePageButton" data-role="button">Change Page!</a>
+           </div>
+            </div>
+            -->
+
+    </div>
+
+    <div id="home5" data-role="page"  data-cache-dom="true">
+
+       
+
+        <div id="demo5" data-role="content">
+
+           
+				 <img id="help1" width="12px"    class="helpdemo" src="images/demo5.png" alt="Logo Air France"  />
+
+            <img id="logo" class="imagedemo3" src="images/avis.png" alt="Logo Air France" width="45%" height="25%" />
+            <div class="rdv">
+                <h2 align="center">Dites nous comment ca s’est passé </h2>
+
+                <p class="textjustifie">
+                    afin de nous aider à assurer un service de la plus grande qualité vous serez invité à noter votre praticien.
+				Si vous avez apprécié notre service n’hésitez pas à en dire un mot sur les réseaux sociaux
+                </p>
+            </div>
+             <div class="btn1" data-role="controlgroup" data-type="horizontal">           
+  
+            <a  id="connexion" onclick="directementAide()" data-role="button" data-mini="false" data-inline="true" data-corners="false">conexion</a>
+            <a  id="creation compte" href="#creation" data-mini="false" data-role="button" data-inline="true" data-corners="false">creer un compte</a>
+</div>
+        </div>
+        <!--  
+          <div    data-role="footer">
+           <div id"boutton" data-role="content"> <a id="changePageButton" data-role="button">Change Page!</a>
+           </div>
+            </div>
+            -->
+
+    </div>
+
+
+<div id="creation" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+           
+			<div class="headerViolet"  data-role="header">
+				<h2>Inscription 1/3</h2>
+				
+			<!--	<a type="submit"onclick="envoi()" data-icon="check"  data-role="button" class="ui-btn-right" >Suivant</a> -->
+			
+			<input  type="submit" value="suivant" onclick="envoi()" data-icon="check"  data-role="button" class="ui-btn-right" /> 
+			</div>
+
+			<div data-role="content"> 
+			
+			 <form id="form_cration1">
+				<table>
+				
+				<tr>
+					<td> <label class="form_col" for="ville">Ville :</label> </td>
+						
+					 <td>
+						<select name="ville" id="ville" data-mini="true">
+						<option value="paris" selected="selected">Paris</option>
+						<option value="marseille"/>Marseille</option>
+						<option value="lyon"/>Lyon</option>
+						<option value="toulouse"/>Toulouse</option>
+						<option value="nice"/>Nice</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+				
+				     <td><label class="form_col" for="civilite">Civilite :</label> </td>
+						
+					 <td>
+						<select name="civilite" id="civilite" data-mini="true">
+						<option value="mr" selected="selected">Mr</option>
+						<option value="mme"/>Mme</option>
+						
+						</select>
+				</td>
+				</tr>
+				<tr>
+					
+			 
+					<td> <label class="form_col" for="nom">Nom :</label>  </td>
+							<td>	<input name="nom" id="nom" type="text"  minlength="5" data-mini="true" class="form_col" /> </td> 
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Prenom :</label> </td>
+					  <td> <input name="prenom" id="prenom" type="text" data-mini="true" class="form_col"  /> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">TEL:</label> </td>
+					  <td> <input name="tel" id="tel" type="text" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Mot de passe:</label> </td>
+					  <td> <input name="mdp" id="mdp" type="password" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Confirmation:</label> </td>
+					  <td> <input name="confirmation_mdp" id="confirmation_mdp" type="password" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Code de votre parrain:</label> </td>
+					  <td> <input name="code_parrain" id="code parrain" type="text" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+			
+			</table>	
+			
+			</form>
+			
+				
+	 
+				<!-- <input  type="submit" onclick="envoi()" value="suivant" data-mini="true"> -->
+				
+			</div>
+
+<!--
+<script>
+$("#form").validate();
+</script> -->
+		</div>
+	<div id="creation2" data-role="page" data-add-back-btn="true" data-cache-dom="true" >
+
+			<div class="headerViolet" data-role="header">
+				<h2>Inscription 2/3</h2>
+				
+				<input  type="submit" value="suivant" onclick="envoi1()" data-icon="check"  data-role="button" class="ui-btn-right" /> 
+			</div>
+
+			<div data-role="content"> 
+
+				 <form id="form_cration2">
+				<table>
+				
+				
+				<tr>
+					
+			 
+					<td> <label class="form_col" for="nom">Mail:</label>  </td>
+							<td>	<input name="mail" id="mail" type="text" data-mini="true" class="form_col" /> </td> 
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Adresse:</label> </td>
+					  <td> <input name="adresse" id="adresse" type="text" data-mini="true"  class="form_col"/> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Etage :</label> </td>
+					  <td> <input name="etage" id="etage" type="text" data-mini="true" class="form_col"/> </td>
+					  <td> <select name="d_g" id="d_g" data-mini="true">
+						<option value="0" selected="selected">Droite</option>
+						<option value="1"/>Gauche</option>
+						
+						
+						</select>  </td>
+						
+				</tr>
+				
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Info:</label> </td>
+					  <td> <input name="info" id="info" type="text" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				  
+	<!--			  <tr> <td>    <label>
+        <input type="checkbox" name="contact">
+    </label>           </td> 
+	  <p  je préfère etre contacté par téléphone à l'arrivée du practicien />
+	</tr>-->
+				  
+			
+			</table>	
+		<label>	 <input type="checkbox" name="contact" id="contact">  je préfère etre contacté par téléphone à l'arrivée du practicien
+    </label>          
+	
+	</form>
+	
+				<!--<input  type="submit" onclick="envoi1()" value="suivant" data-mini="true"> -->
+				
+
+			</div>
+
+		</div>
+				<div id="creation3" data-role="page" data-add-back-btn="true" data-cache-dom="true" >
+
+			<div data-role="header" class="headerViolet">
+				<h2>Inscription 3/3</h2>
+				
+				<input  type="submit" value="suivant" onclick="envoi2()" data-icon="check"  data-role="button" class="ui-btn-right" /> 
+			
+			</div>
+
+			<div data-role="content"> 
+
+				 <form id="form_cration3">
+				<table>
+				
+				
+				<tr>
+					
+			 
+					<td> <label class="form_col" for="nom">Carte:</label>  </td>
+							<td>	<input name="carte" id="carte" type="text" data-mini="true" class="form_col" /> </td> 
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Mois:</label> </td>
+					  
+					 <td> <select name="mois" id="mois" data-mini="true">
+						<option value="01"/>01</option>
+						<option value="02"/>02</option>
+						<option value="03"/>03</option>
+						<option value="04"/>04</option>
+						<option value="05"/>05</option>
+						<option value="06"/>06</option>
+						<option value="07"/>07</option>
+						<option value="08"/>08</option>
+						<option value="09"/>09</option>
+						<option value="10"/>10</option>
+						<option value="11"/>11</option>
+						<option value="12"/>12</option>
+						</select>  </td>
+						
+                      <td> <label class="form_col" for="Adresse">Année:</label> </td>
+					  
+					 <td> <select name="annee" id="annee" data-mini="true">
+						<option value="2014"/>2014</option>
+						<option value="2015"/>2015</option>
+						<option value="2016"/>2016</option>
+						<option value="2017"/>2017</option>
+						<option value="2018"/>2018</option>
+						<option value="2019"/>2019</option>
+						<option value="2020"/>2020</option>
+						<option value="2021"/>2021</option>
+						<option value="2022"/>2022</option>
+						<option value="2023"/>2023</option>
+					
+						</select> </td>
+
+
+
+
+
+					
+						
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">cvv :</label> </td>
+					  <td> <input name="cvv" id="cvv" type="text" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Code cadeau:</label> </td>
+					  <td> <input name="code_cadeau" id="code_cadeau" type="text" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				  
+				  
+				  
+			
+			</table>	
+				</form>
+				<!--<input  type="submit" onclick="envoi2()" value="suivant" data-mini="true">  -->
+				
+
+			</div>
+
+		</div>
+
+    <div data-role="dialog" id="dialog1" class="app-dialog" title="Attention">
+        <div data-role="header">
+            <h3>A dialog</h3>
+        </div>
+        <div id="contentdialog" data-role="content">
+        </div>
+    </div>
+    <div id="connexion" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+        <!--
+pop up
+   <div data-role="popup" id="dialogconnexion" data-overlay-theme="a">
+                      <h1>mot de passe incorrecte</h1>
+ </div>
+-->
+        <div class="headerViolet" data-role="header">
+            <h1>connexion</h1>
+        </div>
+
+        <div data-role="content">
+            <table>
+
+                <tr>
+                    <td>
+                        <label class="form_col" for="e-mail">E-mail:</label>
+                    </td>
+
+                    <td>
+                        <input class="form_col" name="e-mail" id="e-mail" type="text" data-mini="true" value="chourasleh@gmail.com" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label class="form_col" for="Mot de passe">Mot de passe:</label>
+                    </td>
+
+                    <td>
+                        <input class="form_col" name="mdp2" id="mdp2" type="password" data-mini="true" />
+                    </td>
+
+            </table>
+            <input type="submit" onclick="connecterClient()" value="se connecter" data-mini="true"/>
+
+            <a id="oublie" data-role="button" onclick="oublier()" data-mini="true" data-inline="false" data-corners="true">J'ai oublie mon mot de passe</a>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+    <div id="accueil" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div id="accueilC" data-role="content">
+
+          
+            <img id="compte" class="imgCompte" onclick="monCompte()" src="images/moncompte.png" alt="Mon compte" width="20%" />
+            <div  class="description">
+			<label   for="1" onclick="decrireMO()">En quelques MO ...</label>
+			</div>
+<div class="MassageBien"  >           
+		   <label   onclick="MassageBienEtre()">Massage de bien etre</label>
+</div>
+            
+            <img id="motif" class="motif"  src="images/motif.png" alt="Logo MO" width="80%" />
+            <label class="Osteopathie" for="1"  onclick="osteopathie()">Osteopathie</label>
+           <div class="tarifs" > <label for="1"  onclick="tarif()">Tarifs</label>
+		  
+          
+            <a href="tel:0752376821" id="tel" >
+                <img class="tel" src="images/tel.png" onclick="telephoner()" alt="Telephoner" width="10%" /></a>
+
+           <a href="mailto:chourasleh@gmail.com" >
+           
+            <img id="mail" class="mail"  width="10%" src="images/mail.png"  alt="envoyer mail"  />
+</a>
+ </div>
+        </div>
+    </div>
+
+    <div id="AccueilClient" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+        <div id="AccueilClientC" data-role="content">
+
+            <div class="headerViolet" data-role="header">
+                <h1>&nbsp;</h1>
+            </div>
+
+
+
+            <a id="btncompte" href="#mon_compte" data-role="button" data-mini="false" data-corners="true">Mon compte</a>
+            <a id="btnMesCommandes" href="#mes_commandes"  data-mini="false" data-role="button" data-corners="true">Mes commandes</a>
+            <a id="btnInfoBancaires" href="#mes_cartes"   data-role="button" data-mini="false" data-corners="true">informations bancaires</a>
+            <a id="btnOffrir" href="#offrir" data-mini="false" data-role="button" data-corners="true">Offrir</a>
+            <a id="btnAide"  onclick="passerAide()" data-role="button" data-mini="false" data-corners="true">Aide</a>
+            <a id="btnApropos" data-mini="false" data-role="button" data-corners="true">A propos</a>
+
+        </div>
+
+
+    </div>
+   
+<div id="mon_compte" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1>Mon compte</h1>
+        </div>
+
+        <div data-role="content">
+		
+			<ul data-role="listview" data-filter="false">
+					<li><a href="#modifier_info">
+					
+					<h3>Mes informations personnelles</h3>
+					</a>
+					</li>
+ 
+					<li><a href="#changer_mdp">
+					
+					<h3>Changer mon mot de passe </h3>
+					
+					</a>
+					</li>
+				
+					<li><a href="#ajouter_adresse">
+					
+					<h3>Ajouter une adresse</h3>
+					
+					</a>
+					</li>
+					
+					<li><a href="#supprimeradresse" onclick="supprimer()">
+					
+					<h3>Supprimer une adresse</h3>
+					
+					</a>
+					</li>
+					
+					
+					<li><a href="#code_parrinage">
+					
+					<h3>Connaitre mon code parrainnage</h3>
+					
+					</a>
+					</li>
+					
+					
+					
+					
+					<li><a href="#credit_dis">
+					
+					<h3>Mon credit disponible</h3>
+					
+					</a>
+					</li>
+					
+					
+					<li><a href="#">
+					
+					<h3>Acheter un forfait</h3>
+					
+					</a>
+					</li>
+					
+					<li><a href="#">
+					
+					<h3>Suivre ma consommation</h3>
+					
+					</a>
+					</li>
+ 
+				</ul>
+
+		</div>
+		</div>	
+	<div id="modifier_info" data-role="page" data-add-back-btn="true">
+
+			<div class="headerViolet"  data-role="header">
+				<h1>Mes informations personnelles </h1>
+			</div>
+
+			<div data-role="content"> 
+			
+			<form id="form_modifier_info">
+				<table>
+				<tr>
+					
+					<td> <label class="form_col" for="nom">Nom :</label>  </td>
+							<td>	<input name="nom_mod" id="nom_mod" type="text" data-mini="true" class="form_col" /> </td> 
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Prenom :</label> </td>
+					  <td> <input name="prenom_mod" id="prenom_mod" type="text" data-mini="true"  class="form_col"/> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">TEL:</label> </td>
+					  <td> <input name="tel_mod" id="tel_mod" type="text" data-mini="true" class="form_col"/> </td>
+					  
+				</tr>
+				
+				<tr>
+					
+			 
+					<td> <label class="form_col" for="nom">Mail:</label>  </td>
+							<td>	<input name="mail_mod" id="mail_mod" type="text" data-mini="true"  class="form_col"/> </td> 
+				</tr>	
+			</table>	
+			</form>
+				<input  type="submit" onclick="modifier()" value="Modifier" data-mini="true">
+
+			</div>
+
+		</div>	
+			<div id="changer_mdp" data-role="page" data-add-back-btn="true">
+
+			<div class="headerViolet"  data-role="header">
+				<h1>Modifier mot de passe</h1>
+			</div>
+
+			<div data-role="content"> 
+				<table>
+				
+				
+				
+			<tr>
+				     <td>  <label class="form_col" for="Adresse">Ancien mot de passe:</label> </td>
+					  <td> <input name="ancien_mdp" id="ancien_mdp" type="password" data-mini="true" /> </td>
+					  
+				</tr>
+				
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Nouveau mot de passe:</label> </td>
+					  <td> <input name="nouveau_mdp" id="nouveau_mdp" type="password" data-mini="true" /> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Confirmation:</label> </td>
+					  <td> <input name="confirmation_nouveau_mdp" id="confirmation_nouveau_mdp" type="password" data-mini="true" /> </td>
+					  
+				</tr>
+			
+			</table>	
+			
+			
+			
+				
+	 
+				<input  type="submit" onclick="modifier_mdp()" value="Modifier" data-mini="true">
+
+			</div>
+
+		</div>
+<div id="ajouter_adresse" data-role="page" data-add-back-btn="true" data-cache-dom="true" >
+
+			<div class="headerViolet" data-role="header">
+				<h1>Ajouter une adresse</h1>
+			</div>
+
+			<div data-role="content"> 
+
+			<form id="form_ajout_adresse">	
+				<table>
+				
+				
+			
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Adresse:</label> </td>
+					  <td> <input name="adresse_ajout" id="adresse_ajout" type="text" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Etage :</label> </td>
+					  <td> <input name="etage_ajout" id="etage_ajout" type="text" data-mini="true" class="form_col" /> </td>
+					  <td> <select name="d_g_ajout" id="d_g_ajout" data-mini="true" >
+						<option value="0" selected="selected">Droite</option>
+						<option value="1"/>Gauche</option>
+						
+						
+						</select>  </td>
+						
+				</tr>
+				
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Info:</label> </td>
+					  <td> <input name="info_ajout" id="info_ajout" type="text" data-mini="true" class="form_col" /> </td>
+					  
+				</tr>
+				
+				  
+	<!--			  <tr> <td>    <label>
+        <input type="checkbox" name="contact">
+    </label>           </td> 
+	  <p  je préfère etre contacté par téléphone à l'arrivée du practicien />
+	</tr>-->
+				  
+			
+			</table>	
+	         
+			</form>
+	
+	
+				<input  type="submit" onclick="ajout_adresse()" value="Ajouter" data-mini="true">
+				
+
+			</div>
+
+		</div>
+
+     <div id="supprimeradresse" data-role="page" data-add-back-btn="true" >
+
+			<div data-role="header"  class="headerViolet" data-position="fixed">
+				<h1>Liste d'adresses</h1>
+			</div>
+
+			<div data-role="content" id="sdf">
+				
+				<ul id="storage"></ul>
+				
+				<ul id="listadresse" data-role="listview" data-filter="true"></ul>
+			</div>		
+
+		</div> 
+
+		<div id="mes_commandes" data-role="page" data-add-back-btn="true" >
+
+			<div data-role="header"  class="headerViolet" data-position="fixed">
+				<h1>Liste d'adresses</h1>
+			</div>
+
+			<div data-role="content" >
+				
+				<ul id="storage"></ul>
+				
+				<ul id="listcommande" data-role="listview" data-filter="true"></ul>
+			</div>		
+
+		</div> 
+    		
+			
+		<div id="offrir" data-role="page" data-add-back-btn="true" data-cache-dom="true" >
+
+			<div class="headerViolet" data-role="header">
+				<h1>Offrir des point MO</h1>
+			</div>
+
+			<div data-role="content"> 
+
+			<form id="form_offrir">	
+				<table>
+				
+				
+			
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">solde dispo:</label> </td>
+					<!--  <td> <input name="solde" id="solde" type="text" data-mini="true" /> </td> -->
+					<td>  <label id="solde" class="form_col" for="Adresse">    </label> </td>
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">points à offrir :</label> </td>
+					  <td> <input name="point_offrir" id="point_offrir" type="text" data-mini="true" class="form_col"/> </td>
+					 
+						
+				</tr>
+				
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">mail de bénéficiaire:</label> </td>
+					  <td> <input name="mail_ben" id="mail_ben" type="text" data-mini="true"  class="form_col"/> </td>
+					  
+				</tr>
+				
+				<tr>
+				     <td>
+</br>					 
+					  <FONT SIZE="2" color="#FFFFFF">* 1 Point MO = 1€  </FONT></td>
+					  
+				</tr>
+				
+				  
+	<!--			  <tr> <td>    <label>
+        <input type="checkbox" name="contact">
+    </label>           </td> 
+	  <p  je préfère etre contacté par téléphone à l'arrivée du practicien />
+	</tr>-->
+				  
+			
+			</table>	
+	         
+			</form>
+	
+	
+				<input  type="submit" onClick="offrir()" value="Offrir" data-mini="true">
+				
+
+			</div>
+
+		</div>
+	 
+	 
+	  <div id="code_parrinage"   data-role="page" data-add-back-btn="true" >
+
+			<div data-role="header"  class="headerViolet" data-position="fixed">
+				<h1>Code parrinage</h1>
+			</div>
+
+			<div data-role="content" id="code_parr">
+			
+			 <label class="form_col" for="Adresse">Votre code parrain :</label>
+			 </br>
+				
+				<label  id="bouton_code" class="form_col" for="Adresse"></label>
+				
+			</div>		
+
+		</div> 	
+		 <div id="credit_dis"   data-role="page" data-add-back-btn="true" >
+
+			<div data-role="header"  class="headerViolet" >
+				<h1>Crédit disponible</h1>
+			</div>
+
+			<div data-role="content" id="credit_di">
+			
+			 <label class="form_col" for="Adresse">Votre crédit disponible  :</label>
+			 
+				
+				<label  id="bouton_credit" class="form_col" for="Adresse"></label>
+				
+			   <label  id="bouton_mo" class="form_col" for="Adresse">points MO</label>
+				
+			</div>		
+
+		</div> 	
+		
+<div id="mes_cartes" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1>Mes cartes</h1>
+        </div>
+
+        <div data-role="content">
+		
+			<ul data-role="listview" data-filter="false">
+					<li><a href="#ajouter_carte">
+					
+					<h3>Ajouter une carte</h3>
+					</a>
+					</li>
+ 
+					<li><a href="#supprimer_carte" onclick="supprimer_carte()">
+					
+					<h3>Supprimer une carte</h3>
+					
+					</a>
+					</li>
+ 
+				</ul>
+
+		</div>
+		</div>
+
+		<div id="ajouter_carte" data-role="page" data-add-back-btn="true" data-cache-dom="true" >
+
+			<div data-role="header" class="headerViolet">
+				<h1>Ajouter une carte</h1>
+			</div>
+
+			<div data-role="content"> 
+
+			<form id="form_ajouter_carte">
+				<table>
+				
+				
+				<tr>
+					
+			 
+					<td> <label class="form_col" for="nom">Carte:</label>  </td>
+							<td>	<input name="carte_ajout" id="carte_ajout" type="text" data-mini="true" class="form_col" /> </td> 
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">Mois:</label> </td>
+					  
+					 <td> <select name="mois_ajout" id="mois_ajout" data-mini="true">
+						<option value="01"/>01</option>
+						<option value="02"/>02</option>
+						<option value="03"/>03</option>
+						<option value="04"/>04</option>
+						<option value="05"/>05</option>
+						<option value="06"/>06</option>
+						<option value="07"/>07</option>
+						<option value="08"/>08</option>
+						<option value="09"/>09</option>
+						<option value="10"/>10</option>
+						<option value="11"/>11</option>
+						<option value="12"/>12</option>
+						</select>  </td>
+						
+                      <td> <label class="form_col" for="Adresse">Année:</label> </td>
+					  
+					 <td> <select name="annee_ajout" id="annee_ajout" data-mini="true">
+						<option value="2014"/>2014</option>
+						<option value="2015"/>2015</option>
+						<option value="2016"/>2016</option>
+						<option value="2017"/>2017</option>
+						<option value="2018"/>2018</option>
+						<option value="2019"/>2019</option>
+						<option value="2020"/>2020</option>
+						<option value="2021"/>2021</option>
+						<option value="2022"/>2022</option>
+						<option value="2023"/>2023</option>
+					
+						</select> </td>
+
+					
+						
+				</tr>
+				
+				<tr>
+				     <td>  <label class="form_col" for="Adresse">cvv :</label> </td>
+					  <td> <input name="cvv_ajout" id="cvv_ajout" type="text" data-mini="true" class="form_col"/> </td>
+					  
+				</tr>
+			</table>	
+			</form>	
+				<input  type="submit" onclick="ajout_carte()" value="ajouter" data-mini="true">
+				
+
+			</div>
+
+		</div>
+		
+		
+		
+		
+		 <div id="supprimer_carte" data-role="page" data-add-back-btn="true" >
+
+			<div data-role="header" class="headerViolet" data-position="fixed">
+				<h1>Liste des cartes</h1>
+			</div>
+
+			<div data-role="content" id="sdf">
+				
+				<ul id="storage"></ul>
+				
+				<ul id="listcarte" data-role="listview" data-filter="true"></ul>
+			</div>		
+
+		</div> 
+		
+<div id="MassageBienEtre" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+		<div class="headerViolet" data-role="header">
+            <h1>Massage de bien-etre</h1>
+        </div>
+			<div id="MassageBienEtreC" data-role="content"> 
+
+ <!--
+        
+        <br>
+         <p  class="textjustifie"> Vous souhaitez que votre practicien:</p>
+          <input type='checkbox' name='choix[]' value='homme'>Un homme
+<br>
+<input type='checkbox' name='choix[]' value='femme'>Une femme
+<br>
+<input type='checkbox' name='choix[]' value='importe'>Peu importe
+<br>
+<br>  -->
+
+
+	
+<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+    	<legend class="form_col">Vous souhaitez que votre practicien soit:</legend>
+         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="masculin"  />
+         	<label for="radio-choice-1">Un homme</label>
+
+         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="feminin"  />
+         	<label for="radio-choice-2">Une femme</label>
+
+         	<input  checked="checked"  type="radio" name="radio-choice-1" id="radio-choice-3" value="aleatoire"  />
+         	<label for="radio-choice-3">Peu n'importe</label>
+    </fieldset>
+</div>
+
+<table>
+				
+				
+				<tr>
+					
+			 
+					<td> <label class="form_col" for="practicien">Votre practicien habituel:</label>  </td>
+							<td>	<input name="practicienH" id="practH" type="text" data-mini="true" value="" /> </td> 
+				</tr>
+                </table>
+  <input type="submit" onclick="MassageBien1()" value="Valider" data-mini="true"/>
+
+            </div>
+      
+
+</div>
+    <div id="MassageOsteo" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1>Osteopathie</h1>
+        </div>
+        <div id="MassageOsteoC" data-role="content">
+
+
+
+            <br/>
+            <p class="textjustifie">
+                Si vous souhaitez un endez-vous avec votre osteopathe 
+         habituel nous vous invitons a entrer son identifiant
+            </p>
+
+            <br/>
+			
+            <input name="practicienH2" id="practH" type="text" data-mini="true" value="" />
+  <input type="submit" onclick="MassageOsteo1()" value="suivant" data-mini="true"/>
+
+            <p class="textjustifie">
+                Votre ostéopathe vous appellera personnellement à la suite de votre réservation et, en cas de doute sur I ‘origine du problème,
+ pourra vous réorienter vers une consultation mieux adaptée (médecin généraliste, spécialiste)
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+    <div id="choisirdescription" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1>En quelques <strong>MO</strong></h1>
+        </div>
+        <div id="choisirdescriptionC" data-role="content">
+            <a class="btn4" id="connexion" href="#descriptionmassage" data-role="button" data-mini="true" data-inline="false" data-corners="true">Massage de bien etre</a>
+            <a class="btn3" id="creation compte" href="#descriptionosteo" data-mini="true" data-role="button" data-inline="false" data-corners="true">Osteopathie</a>
+        </div>
+
+
+
+    </div>
+
+
+    <div id="descriptionmassage" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1>Massage</h1>
+        </div>
+        <div id="descriptionmassageC" data-role="content">
+
+            <p class="textjustifie">
+                <strong>MO</strong> vous offre <strong>un service de massage de bien-être sur-mesure à domicile</strong>, à l’hôtel ou encore au bureau.<br />
+                <br />
+                Nous vous proposons une équipe de praticien en massage de bien-être tous diplômés des meilleures écoles au monde.  Chacun maitrisant nombre de techniques des plus nobles, ils se déplacent <strong>chez vous 7 jours sur 7</strong>, et mettent à votre service leurs compétences et leur excellence : 
+                <br />
+                <br />
+                <strong>Un massage unique, improvisé selon vos besoins et vos envies</strong> que nous vous invitons à confier à votre praticien à son arrivée.<br />
+                <br />
+                Après avoir défini ensemble le type de massage qui vous fait envie ainsi que l’ambiance sonore qui vous portera au fil de celui-ci vous serez invité à choisir votre huile de massage parmi un choix d’huiles naturelles et à vous allonger confortablement sur un large futon de coton bio avant de vous abandonner à ce moment magique<br />
+                <br />
+                Le choix du futon à été pensé dans votre intérêt, pour un confort exceptionnel et afin que le praticien puisse évoluer en utilisant son poids de manière optimal tout au long de votre massage.
+
+
+
+          
+            </p>
+
+
+
+        </div>
+
+
+    </div>
+    <div id="descriptionosteo" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1>Osteopathie</h1>
+        </div>
+        <div id="descriptionosteoC" data-role="content">
+
+            <p class="textjustifie">
+                L’ostéopathie se définit comme l’art de diagnostiquer et de traiter les déséquilibres de mobilité articulaire et tissulaire (tendon, muscles, organes…) perturbant l’état de santé, fondé sur la capacité du corps à s’auto-équilibrer et sur une connaissance extrêmement approfondie de l’anatomie.<br />
+                <br />
+                Demandez à votre Ostéopathe un "MO body adjustment"<br />
+                <br />
+                Le "MO body adjustment" est un traitement global spécialement mis au point par nos ostéopathes qui se veut à la fois préventif et curatif.<br />
+                <br />
+                Durant environ une heure, l'ostéopathe passe en revue l’ensemble de votre corps, détermine où se situent les déséquilibres et ré harmonise les structures anatomiques. L'organisme ayant été stimulé dans sa capacité d’auto-guérison, les symptômes douloureux s'effacent peu à peu et vous retrouvez un corps léger et parfaitement équilibré.
+
+
+
+          
+            </p>
+
+
+
+        </div>
+    </div>
+	  
+	 <div id="reservation" data-role="page" data-add-back-btn="true">
+
+			<div class="headerViolet"  data-role="header">
+				<h1>Réservation</h1>
+			</div>
+
+			<div data-role="content"> 
+			
+				
+		
+				       <label class="form_col" for="Adresse">Votre RDV est prévu le:</label> 
+			</br>
+			
+					  <input class="form_col" name="jourReservation" id="jour" type="text" data-mini="true" data-inline="true" />
+					   
+				
+				
+				
+				
+			
+				     	
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend class="form_col">Pour la durée de:</legend>
+				
+				<input type="radio" name="radio-choice-2" id="radio-choice-1" value="1"  />
+				<label for="radio-choice-1">1 H</label>
+
+				<input type="radio" name="radio-choice-2" id="radio-choice-2" value="1.5"  />
+				<label for="radio-choice-2">1 H 30</label>
+
+				<input type="radio" name="radio-choice-2" id="radio-choice-3" value="2"  />
+				<label for="radio-choice-3">2 H</label>
+					</fieldset>
+				</div>
+				<label class="form_col" for="Adresse">Plages horaires:  </label> 
+				<select name="list_dispo" id="list_dispo" data-mini="false">
+			
+				</select>  
+				
+				
+				<label class="form_col" for="Adresse">Au:</label> 
+				<select name="list_adr" id="list_adr" data-mini="true">
+				<option value="100" selected="selected">Choisisser une adresse</option>
+				</select>  
+				
+				
+				<label class="form_col" for="Adresse">Paiement:</label>
+				<table>
+				 <tr>
+				 
+				 <td>
+				 <label>	 <input type="checkbox" name="visa" id="visa" data-mini="true"> VISA</label>
+				 
+				 </td>
+				<td>	
+					
+				<select name="list_car" id="list_car" data-mini="true">
+				<option value="100" selected="selected">Choisisser une carte bancaire</option>
+				</select> 
+				</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label>	 <input type="checkbox" name="pt_mo" id="pt_mo" data-mini="true"> Point MO</label>
+				 
+				</td>
+				<td>
+				<label id="dispo" class="form_col" for="Adresse">    </label> 
+				</td>
+				</tr>
+				</table>
+	 
+				<input  type="submit" onclick="verifierCommandeDispo()" value="confirmer et valider le paiement" data-mini="true"/>
+
+				
+		
+	  
+	</div>  
+	  
+	  
+	 </div>
+	 
+	 
+	 
+	 
+	 	  
+	 <div id="reservationOsteo" data-role="page" data-add-back-btn="true">
+
+			<div class="headerViolet"  data-role="header">
+				<h1>Réservation</h1>
+			</div>
+
+			<div data-role="content"> 
+			
+				
+		
+				       <label class="form_col" for="Adresse">Votre RDV est prévu le:</label> 
+			</br>
+			
+					  <input class="form_col" name="jourReservationO" id="jour" type="text" data-mini="true" data-inline="true" />
+					   
+				
+				
+				
+				
+			
+				     	
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend class="form_col">Pour le traitement:</legend>
+				
+				<input type="radio" name="radio-choice-3" id="radio-choice-1" value="1"  />
+				<label for="radio-choice-1">Osteopathie</label>
+
+				<input type="radio" name="radio-choice-3" id="radio-choice-2" value="1.5"  />
+				<label for="radio-choice-2">Body Ajustment</label>
+
+
+					</fieldset>
+				</div>
+				<label class="form_col" for="Adresse">Plages horaires:  </label> 
+				<select name="Olist_dispo" id="Olist_dispo" data-mini="false">
+			
+				</select>  
+				
+				
+				<label class="form_col" for="Adresse">Au:</label> 
+				<select name="Olist_adr" id="list_adr" data-mini="true">
+				<option value="0" selected="selected">Choisisser une adresse</option>
+				</select>  
+				
+				
+				<label class="form_col" for="Adresse">Paiement:</label>
+				<table>
+				 <tr>
+				 
+				 <td>
+				 <label>	 <input type="checkbox" name="Ovisa" id="Ovisa" data-mini="true"> VISA</label>
+				 
+				 </td>
+				<td>	
+					
+				<select name="Olist_car" id="Olist_car" data-mini="true">
+				<option value="0" selected="selected">Choisisser une carte bancaire</option>
+				</select> 
+				</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<label>	 <input type="checkbox" name="Opt_mo" id="Opt_mo" data-mini="true"> Point MO</label>
+				 
+				</td>
+				<td>
+				<label id="Odispo" class="form_col" for="Adresse">    </label> 
+				</td>
+				</tr>
+				</table>
+	 
+				<input  type="submit" onclick="verifierCommandeDispo()" value="confirmer et valider le paiement" data-mini="true"/>
+
+				
+		
+	  
+	</div>  
+	  
+	  
+	 </div>
+	 
+	   <div id="dispo_existants" data-role="page" data-add-back-btn="true">
+
+			<div class="headerViolet"  data-role="header">
+				<h1>Disponibilités</h1>
+			</div>
+
+			<div data-role="content">   
+	  <label class="form_col" for="Adresse">choisissez une plage horaire:</label> 
+				
+	  
+	  </div>  
+	  
+	  
+	 </div>	
+ <div id="avis1"   data-role="page" data-add-back-btn="true" >
+
+			<div data-role="header"  class="headerViolet" >
+				<h1>Votre avis</h1>
+			</div>
+
+			<div data-role="content" id="avis11">
+			<form id="form_avis" >
+  
+     <label class="comment" for="Adresse">Merci d'avoir choisi MO</label>
+	  <label class="comment1" for="Adresse">Notez votre dernière prestation</label>
+  <div class="etoile">
+  <img src="images/star_out.PNG" id="star_1" class="star"/>
+  <img src="images/star_out.PNG" id="star_2" class="star"/>
+  <img src="images/star_out.PNG" id="star_3" class="star"/>
+  <img src="images/star_out.PNG" id="star_4" class="star"/>
+  <img src="images/star_out.PNG" id="star_5" class="star"/>
+  </div>
+  </br>
+  
+  	
+<div data-role="fieldcontain" id="reclamation">
+    <fieldset data-role="controlgroup">
+    	<legend class="form_col" >Donnez vos remarques:</legend>
+         	<input type="radio" name="rec" id="Ponctualités" value="Ponctualités"  />
+         	<label for="Ponctualités">Ponctualités</label>
+
+         	<input type="radio" name="rec" id="Qualité de la prestation" value="Qualité de la prestation"  />
+         	<label for="Qualité de la prestation">Qualité de la prestation</label>
+
+         	<input type="radio" name="rec" id="radio-choice-3" value="choice-3"  />
+         	<label for="radio-choice-3">Professionnalisme</label>
+
+         	<input type="radio" name="rec" id="radio-choice-4" value="Autres"  />
+         	<label for="radio-choice-4">Autres</label>
+    </fieldset>
+	 <textarea id="commentaire" name="commentaire" rows="5" cols="30" class="form_col">Commentaire optionnel </textarea>
+</div>
+  
+  
+  
+
+  
+  <!-- Ajouter autant d'étoile que nécessaire !-->
+  </form>
+  <input type="submit" value="Valider" class="bouton"  onClick="enregistrer()"/>
+
+			 
+			</div>		
+		</div>
+	  
+    <div id="accueilMedecin" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1>Espace Medecin</h1>
+        </div>
+        <div id="accueilMedecinC" data-role="content">
+
+
+
+            <br>
+
+            <p class="textjustifie">Si vous souhaitez ajouter vos disponibilites nous vous invitons a choisir la date et la duree dans l'agenda</p>
+
+            <br>
+			             <div  data-role="controlgroup" data-type="horizontal">           
+
+            <a id="connexion" href="#disponibilite" data-role="button" data-mini="true" data-inline="true" data-corners="true">ajouter disponibilite</a>
+            <a id="connexion" href="#voircalendar" data-role="button" data-mini="true" data-inline="true" data-corners="true">voir calendrier</a>
+</div>
+
+        </div>
+
+
+    </div>
+
+    <div id="disponibilite" data-role="page" data-add-back-btn="true" data-cache-dom="true" style="ptTimeSelectCntr">
+
+        <div class="headerViolet" data-role="header">
+            <h1>Ajour de disponibilite</h1>
+        </div>
+        <div id="disponibiliteC" data-role="content">
+
+
+            <label class="form_col" for="mydate">Choisir la date</label>
+            <input class="form_col" name="datemedecin" />
+
+            <label class="form_col" for="mydate">Choisir la duree de disponibilite</label>
+            <label class="form_col" for="mydate">Heure de debut</label>
+            <input class="form_col" id="heureDebut" name="heureDebut" class="ui-widget-content" style="padding: .5em;" />
+            <label class="form_col" for="mydate">Heure de fin</label>
+            <input class="form_col" id="heureFin" name="heureFin" class="ui-widget-content" style="padding: .5em;" />
+ 
+			  
+
+            <a id="connexion" onclick="ajoutdispo()" data-role="button" data-mini="true" data-inline="true" data-corners="true">Valider</a>
+
+
+   
+  
+
+        </div>
+
+
+    </div>
+
+    <div id="voircalendar" data-role="page" data-add-back-btn="true" data-cache-dom="true">
+
+        <div class="headerViolet" data-role="header">
+            <h1> Calendrier </h1>
+        </div>
+        <div id="voircalendarC" data-role="content">
+            <div id='calendar'>
+			<!-- <img class="imgCalright" id="navright" onclick="jourprev()" width="20px" src="images/prev.png" alt="suivant"  data-inline="true" />       
+     		 <label class="clarifierCal " for="navleft" data-inline="true" >Choisissez la date</label>
+		<img class="imgCalLeft" id="navleft" onclick="joursuiv()" src="images/next.png" width="20px" alt="suivant" data-inline="true" />
+          -->
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="traitement.js"> </script>
+
+</body>
+
+</html>

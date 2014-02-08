@@ -1,0 +1,151 @@
+        /*.ui-page .ui-header {
+  background: #636 !important;
+}*/
+/*#home1{position:absolute; top:0; left:0; text-align:center;  width:100%; height:100%; display:none;}*/
+		.imagedemo1{
+		  position:absolute;  bottom:20%; left:40%;  
+		 
+		}
+		.imagedemo2{
+		  margin-top: -20%;
+		  margin-left: 20%;
+		}
+		.imagedemo3{
+		  margin-top: -30%;
+		  margin-left: 20%;
+		}
+		.imgCompte{
+		  margin-top:  5%;
+		  margin-left: 3%;
+		}
+		.description {
+                    margin-top: -17%;
+                    margin-left: 55%;
+                    color: #FFFFFF;
+                }
+		.MassageBien{
+	margin-left: 5%;
+	margin-top: 50%;
+	color: #FFFFFF;
+                }
+		.motif{
+		 margin-top: 5%;
+                    margin-left: 15%;
+                    
+				}
+		.Osteopathie {
+                    margin-top: 5%;
+                    margin-left: 70%;
+                    color: #FFFFFF;
+                }
+		.tarifs {
+                    margin-top: 30%;
+                    margin-left: 5%;
+                    color: #FFFFFF;
+                }
+		.tel{
+		 margin-top: 5%;
+         margin-left: 50%;
+                   
+		}
+		.mail{
+
+         margin-left: 2%;
+                   
+		}
+		.helpdemo{
+		  margin-top: 20%;
+		  margin-left: 90%;
+		}
+        .ui-page {
+            background: #321A32 ;
+        }
+                .btn1 {
+                   position:absolute;  bottom:5%; 
+                }
+				.rdv {
+                    margin-top: 5%;
+                    color: #FFFFFF;
+					font-family: Verdana, sans-serif;
+					}
+					     
+
+            
+
+                .btn2 {
+                    margin-top: 10%;
+                }
+				 .btn3 {
+                    margin-top: 10%;
+                }
+				.btn4 {
+                    margin-top: 20%;
+					
+                }
+			
+				    
+				.textjustifie
+				{
+				font-size: 1em;
+				font-family: Verdana, sans-serif;
+				vertical-align:middle;
+				text-align: justify;
+				color: #FFFFFF;
+				}
+
+                
+
+                
+
+				textarea
+				{ 
+				background: #321A32;
+				resize:none;
+				color: #FFFFFF;
+				}
+				.headerViolet
+				{
+				background: #321A32;
+				}
+				.form_col
+				{
+				 color: #FFFFFF;
+				}
+				
+				.comment
+				{
+				margin-top: 10%;
+		         margin-left: 30%;
+				color: #FFFFFF;
+				}
+				
+				.comment1
+				{
+				margin-top: 19%;
+		         margin-left: 22%;
+				color: #FFFFFF;
+				}
+				
+				
+				
+				.etoile
+				{
+				 margin-top: 20%;
+		         margin-left: 30%;
+				}
+				.imgCalright 
+				{
+				position:absolute;  left:5%;  margin-top: 0.51%;
+				 
+				}
+				
+				.imgCalLeft
+				{
+				position:absolute;  right:5%;  margin-top: 0.51%;
+				
+				}
+				.clarifierCal
+				{
+				 margin-left: 10%;
+				 color: #FFFFFF;
+				}
