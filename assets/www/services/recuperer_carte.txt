@@ -1,0 +1,7 @@
+<?php
+	
+$sexe =$_POST['sexe'];
+$code=$_POST['code'];
+$fidelite=$_POST['fidelite'];
+	
+?>

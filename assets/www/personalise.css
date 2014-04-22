@@ -1,151 +1,370 @@
-        /*.ui-page .ui-header {
-  background: #636 !important;
-}*/
-/*#home1{position:absolute; top:0; left:0; text-align:center;  width:100%; height:100%; display:none;}*/
-		.imagedemo1{
-		  position:absolute;  bottom:20%; left:40%;  
-		 
-		}
-		.imagedemo2{
-		  margin-top: -20%;
-		  margin-left: 20%;
-		}
-		.imagedemo3{
-		  margin-top: -30%;
-		  margin-left: 20%;
-		}
-		.imgCompte{
-		  margin-top:  5%;
-		  margin-left: 3%;
-		}
-		.description {
-                    margin-top: -17%;
-                    margin-left: 55%;
-                    color: #FFFFFF;
-                }
-		.MassageBien{
-	margin-left: 5%;
-	margin-top: 50%;
-	color: #FFFFFF;
-                }
-		.motif{
-		 margin-top: 5%;
-                    margin-left: 15%;
-                    
-				}
-		.Osteopathie {
-                    margin-top: 5%;
-                    margin-left: 70%;
-                    color: #FFFFFF;
-                }
-		.tarifs {
-                    margin-top: 30%;
-                    margin-left: 5%;
-                    color: #FFFFFF;
-                }
-		.tel{
-		 margin-top: 5%;
-         margin-left: 50%;
-                   
-		}
-		.mail{
+/*--------------------------------- personalise.css ---------------------------------*/
 
-         margin-left: 2%;
-                   
-		}
-		.helpdemo{
-		  margin-top: 20%;
-		  margin-left: 90%;
-		}
-        .ui-page {
-            background: #321A32 ;
-        }
-                .btn1 {
-                   position:absolute;  bottom:5%; 
-                }
-				.rdv {
-                    margin-top: 5%;
-                    color: #FFFFFF;
-					font-family: Verdana, sans-serif;
-					}
-					     
+/*
 
-            
+.ui-page .ui-header {
+ background: #636 !important;
+}
 
-                .btn2 {
-                    margin-top: 10%;
-                }
-				 .btn3 {
-                    margin-top: 10%;
-                }
-				.btn4 {
-                    margin-top: 20%;
-					
-                }
-			
-				    
-				.textjustifie
-				{
-				font-size: 1em;
-				font-family: Verdana, sans-serif;
-				vertical-align:middle;
-				text-align: justify;
-				color: #FFFFFF;
-				}
+#home1 {
+  position:absolute;
+  top:0;
+  left:0;
+  text-align:center;
+  width:100%; height:100%;
+  display:none;
+}
 
-                
+*/
 
-                
+* {
+  font-family: "Century Gothic" !important;
+}
 
-				textarea
-				{ 
-				background: #321A32;
-				resize:none;
-				color: #FFFFFF;
-				}
-				.headerViolet
-				{
-				background: #321A32;
-				}
-				.form_col
-				{
-				 color: #FFFFFF;
-				}
-				
-				.comment
-				{
-				margin-top: 10%;
-		         margin-left: 30%;
-				color: #FFFFFF;
-				}
-				
-				.comment1
-				{
-				margin-top: 19%;
-		         margin-left: 22%;
-				color: #FFFFFF;
-				}
-				
-				
-				
-				.etoile
-				{
-				 margin-top: 20%;
-		         margin-left: 30%;
-				}
-				.imgCalright 
-				{
-				position:absolute;  left:5%;  margin-top: 0.51%;
-				 
-				}
-				
-				.imgCalLeft
-				{
-				position:absolute;  right:5%;  margin-top: 0.51%;
-				
-				}
-				.clarifierCal
-				{
-				 margin-left: 10%;
-				 color: #FFFFFF;
-				}
+label {
+  color: white;
+}
+
+@font-face {
+  font-family: 'Century Gothic'; src: url('century_gothic.eot');
+  src: url('century_gothic.eot?#iefix') format('embedded-opentype'), url('century_gothic.svg#Century Gothic')   format('svg'), url('century_gothic.woff') format('woff'), url('century_gothic.ttf') format('truetype');
+  font-weight: normal; font-style: normal;
+
+      font-family: 'moregular';
+    src: url('mo-webfont.eot');
+    src: url('mo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('mo-webfont.woff') format('woff'),
+         url('mo-webfont.ttf') format('truetype'),
+         url('mo-webfont.svg#moregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.logo-mo{
+  font-family: "moregular" !important;
+  font-size: 1.6em;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+}
+
+.imagedemo1 {
+  position:absolute;  bottom:20%; left:38%;
+}
+
+.imagedemo2 {
+  position: fixed;
+  bottom: 226px;
+  left: 20%;
+  top: 3%;
+  width: initial;
+  height:50%;
+}
+
+.imagedemo3 {
+  margin-top: -30%;
+}
+
+.imgCompte {
+  float: left;
+  position: absolute;
+  vertical-align:middle;
+  height: 53px;
+}
+
+.description {
+  text-align: right;
+  float: right;
+  right: 5%;
+  position: absolute;
+  color: #FFFFFF;
+}
+
+.tel-mail {
+  text-align: right;
+  float: right;
+  right: 5%;
+  position: absolute;
+  color: #FFFFFF;
+}
+
+.MassageBien {
+  margin-left: 15%;
+  margin-top: 60%;
+  color: #FFFFFF;
+}
+
+.Tarifs {
+/*  border: 5px solid red;*/
+  margin-top: 50%;
+  margin-bottom: 10px;
+  vertical-align: top;
+  float: left;
+  line-height: 50px;
+  min-width: 600px;
+}
+
+.motif {
+ margin-top: 5%;
+/* margin-left: 13.7%;*/
+ margin-bottom: 3%;
+}
+
+.Osteopathie {
+ margin-top: 5%;
+ color: #FFFFFF;
+}
+/*
+
+.tarifs {
+ margin-bottom: : 30%;
+ margin-left: 5px;
+ margin-right: 5px;
+ position: absolute;
+ display: inline-block;
+ color: #FFFFFF;
+ border: 5px solid blue;
+}
+*/
+
+.leTarif {
+  color: #FFF;
+  position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 495px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.tel {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.helpdemo {
+  margin-top: 20%;
+  margin-left: 90%;
+}
+
+.ui-page {
+  background: #321A32 ;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+}
+
+.btn1 {
+
+}
+
+.rdv {
+  margin-top: 5%;
+  color: #FFFFFF;
+  font-family: Century Gothic;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.btn2 {
+  margin-top: 10%;
+}
+
+.btn3 {
+  margin-top: 10%;
+}
+
+.btn4 {
+  margin-top: 20%;
+}
+
+.textjustifie {
+  font-size: 1em;
+  font-family: Century Gothic;
+  vertical-align:middle;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 95px;
+}
+
+.textjustifie2 {
+  font-size: 1em;
+  font-family: Century Gothic;
+  vertical-align:middle;
+  text-align: justify;
+  color: white;
+}
+
+textarea {
+  background: #321A32;
+  resize:none;
+  color: #FFFFFF;
+}
+
+.headerViolet {
+  background-image: -webkit-gradient(linear, left top, left bottom, from( #3c3c3c /*{a-bar-background-start}; */
+background-image: -ms-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/);
+background-image: -o-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/);
+
+}
+
+.form_col {
+ color: #FFFFFF;
+text-align: right !important; margin-right: 26px;
+}
+
+#avis11 {
+
+}
+
+.comment {
+  margin-top: 10%;
+  margin-left: 30%;
+  color: #FFFFFF;
+}
+
+.comment1 {
+  margin-top: 19%;
+  margin-left: 22%;
+  color: #FFFFFF;
+}
+
+.etoile {
+ margin-top: 20%;
+ margin-left: 30%;
+}
+
+.imgCalright {
+  position:absolute;  left:5%;  margin-top: 0.51%;
+}
+
+.imgCalLeft {
+  position:absolute;  right:5%;  margin-top: 0.51%;
+}
+
+.clarifierCal {
+ margin-left: 10%;
+ color: #FFFFFF;
+}
+
+.ui-body-c, .ui-overlay-c {
+    text-shadow: none;
+    font-size: 16px;
+}
+
+.accueilHaut {
+  margin-top:  5%;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100% auto;
+  display: inline-block;
+}
+
+.FloatLeftTarif {
+  float: left;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.FloatRightTarif {
+  float: right;
+  text-align: right;
+  vertical-align: middle;
+}
+
+
+.droite {
+  text-align: right;
+  float: right;
+}
+
+
+
+.st0
+{
+  background : #FF0000;
+  background : rgba(255, 0, 0, 1);
+  position : absolute ;
+  left : 375px;
+  top : 319px;
+  width : 2px;
+  height : 0px;
+}
+
+.st1
+{
+  background : #402637;
+  background : rgba(64, 38, 55, 1);
+  position : absolute ;
+  left : 0px;
+  top : 0px;
+  width : 875px;
+  height : 130px;
+  border-radius : 40px;
+  -moz-border-radius : 40px;
+  -webkit-border-radius : 40px;
+}
+
+.st2
+{
+  background : #000000;
+  background : rgba(0, 0, 0, 1);
+  position : absolute ;
+  left : 11px;
+  top : 67px;
+  width : 853px;
+  height : 55px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.st3
+{
+  background : -moz-linear-gradient(50% 100% 90deg,rgba(72, 31, 62, 1) 0%,rgba(55, 14, 48, 1) 100%,rgba(67, 31, 62, 1) 100%,rgba(79, 48, 76, 1) 100%,rgba(88, 59, 86, 1) 100%,rgba(93, 66, 91, 1) 100%,rgba(94, 68, 93, 1) 100%);
+  background : -webkit-linear-gradient(90deg, rgba(72, 31, 62, 1) 0%, rgba(55, 14, 48, 1) 100%, rgba(67, 31, 62, 1) 100%, rgba(79, 48, 76, 1) 100%, rgba(88, 59, 86, 1) 100%, rgba(93, 66, 91, 1) 100%, rgba(94, 68, 93, 1) 100%);
+  background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(72, 31, 62, 1) ),color-stop(1,rgba(55, 14, 48, 1) ),color-stop(1,rgba(67, 31, 62, 1) ),color-stop(1,rgba(79, 48, 76, 1) ),color-stop(1,rgba(88, 59, 86, 1) ),color-stop(1,rgba(93, 66, 91, 1) ),color-stop(1,rgba(94, 68, 93, 1) ));
+  background : -o-linear-gradient(90deg, rgba(72, 31, 62, 1) 0%, rgba(55, 14, 48, 1) 100%, rgba(67, 31, 62, 1) 100%, rgba(79, 48, 76, 1) 100%, rgba(88, 59, 86, 1) 100%, rgba(93, 66, 91, 1) 100%, rgba(94, 68, 93, 1) 100%);
+  background : -ms-linear-gradient(90deg, rgba(72, 31, 62, 1) 0%, rgba(55, 14, 48, 1) 100%, rgba(67, 31, 62, 1) 100%, rgba(79, 48, 76, 1) 100%, rgba(88, 59, 86, 1) 100%, rgba(93, 66, 91, 1) 100%, rgba(94, 68, 93, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#481F3E', endColorstr='#5E445D' ,GradientType=0)";
+  background : linear-gradient(0deg, rgba(72, 31, 62, 1) 0%, rgba(55, 14, 48, 1) 100%, rgba(67, 31, 62, 1) 100%, rgba(79, 48, 76, 1) 100%, rgba(88, 59, 86, 1) 100%, rgba(93, 66, 91, 1) 100%, rgba(94, 68, 93, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5E445D',endColorstr='#481F3E' , GradientType=0);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+}
+
+.st4
+{
+  background : -moz-linear-gradient(50% 0% -90deg,rgba(94, 68, 93, 1) 0%,rgba(96, 70, 94, 1) 0%,rgba(103, 77, 99, 1) 0%,rgba(105, 79, 100, 1) 0%,rgba(67, 26, 60, 1) 100%);
+  background : -webkit-linear-gradient(-90deg, rgba(94, 68, 93, 1) 0%, rgba(96, 70, 94, 1) 0%, rgba(103, 77, 99, 1) 0%, rgba(105, 79, 100, 1) 0%, rgba(67, 26, 60, 1) 100%);
+  background : -webkit-gradient(linear,50% 0% ,50% 100% ,color-stop(0,rgba(94, 68, 93, 1) ),color-stop(0,rgba(96, 70, 94, 1) ),color-stop(0,rgba(103, 77, 99, 1) ),color-stop(0,rgba(105, 79, 100, 1) ),color-stop(1,rgba(67, 26, 60, 1) ));
+  background : -o-linear-gradient(-90deg, rgba(94, 68, 93, 1) 0%, rgba(96, 70, 94, 1) 0%, rgba(103, 77, 99, 1) 0%, rgba(105, 79, 100, 1) 0%, rgba(67, 26, 60, 1) 100%);
+  background : -ms-linear-gradient(-90deg, rgba(94, 68, 93, 1) 0%, rgba(96, 70, 94, 1) 0%, rgba(103, 77, 99, 1) 0%, rgba(105, 79, 100, 1) 0%, rgba(67, 26, 60, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#5E445D', endColorstr='#431A3C' ,GradientType=0)";
+  background : linear-gradient(180deg, rgba(94, 68, 93, 1) 0%, rgba(96, 70, 94, 1) 0%, rgba(103, 77, 99, 1) 0%, rgba(105, 79, 100, 1) 0%, rgba(67, 26, 60, 1) 100%);
+  position : absolute ;
+  left : 11px;
+  top : 11px;
+  width : 853px;
+  height : 55px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5E445D',endColorstr='#431A3C' , GradientType=0);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+#choisirdescriptionC {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 495px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#tarifs {
+	min-height: 600px;
+}

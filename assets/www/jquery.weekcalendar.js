@@ -50,7 +50,7 @@
         startParam: 'start',
         endParam: 'end',
         businessHours: {start: 8, end: 18, limitDisplay: false},
-        newEventText: '',
+        newEventText: 'Disponibilité',
         timeslotHeight: 20,
         defaultEventLength: 2,
         timeslotsPerHour: 4,
@@ -116,8 +116,8 @@
         },
         noEvents: function() {
         },
-        eventHeader: function(calEvent, calendar) {
-          var options = calendar.weekCalendar('option');
+        eventHeader: function(calEvent, calendar) { return "Disponibilité"
+         /* var options = calendar.weekCalendar('option');
           var one_hour = 3600000;
           var displayTitleWithTime = calEvent.end.getTime() - calEvent.start.getTime() <= (one_hour / options.timeslotsPerHour);
           if (displayTitleWithTime) {
@@ -131,14 +131,14 @@
                     calendar.weekCalendar(
                         'formatTime', calEvent.end);
           }
-        },
+        */},
         eventBody: function(calEvent, calendar) {
           return calEvent.title;
         },
-        shortMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        longMonths: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-        shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-        longDays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        shortMonths: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Juin', 'Jul', 'Aout', 'Sep', 'Oct', 'Nov', 'Dec'],
+        longMonths: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
+        shortDays: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+        longDays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
         /* multi-users options */
         /**
          * the available users for calendar.
@@ -261,7 +261,7 @@
          * @param {number} option daysToShow.
          * @return {String} the title attribute for the calendar.
          */
-        title: '%start% - %end%',
+        title: 'Disponibilité',
         /**
          * default options to pass to callback
          * you can pass a function returning an object or a litteral object
@@ -667,6 +667,7 @@
         var self = this;
         var options = this.options;
 
+//        $calendarContainer = $('<div id="voircalendarC">').appendTo(self.element);
         $calendarContainer = $('<div id="swipecalendar" class=\"ui-widget wc-container\">').appendTo(self.element);
 
         //render the different parts
@@ -697,14 +698,19 @@
         if (options.buttons) {
             var calendarNavHtml = '';
 
-            calendarNavHtml += '<div class=\"ui-widget-header wc-toolbar\">';
+            calendarNavHtml += '<div class=\"ui-widget-header wc-toolbar\" style=\"padding:0px;\">';
               calendarNavHtml += '<div class=\"wc-display\"></div>';
+              calendarNavHtml += '<div style=\"text-align:center;background-color:#F2F2F2\">';
+              
               calendarNavHtml += '<div class=\"wc-nav\">';
                 calendarNavHtml += '<button data-mini="true" widht="30px" height="10px" data-inline="true" class=\"wc-prev\">' + options.buttonText.lastWeek + '</button>';
                 calendarNavHtml += '<button data-mini="true" height="10px" widht="30px"  data-inline="true" class=\"wc-today\">' + options.buttonText.today + '</button>';
                 calendarNavHtml += '<button  data-mini="true" widht="30px" height="10px" data-inline="true" class=\"wc-next\">' + options.buttonText.nextWeek + '</button>';
               calendarNavHtml += '</div>';
+              
              // calendarNavHtml += '<h1 class=\"wc-title\"></h1>';
+//            calendarNavHtml += '<div style="clear: both;"></div>';
+            calendarNavHtml += '</div>';
             calendarNavHtml += '</div>';
 
             $(calendarNavHtml).appendTo($calendarContainer);
@@ -722,7 +728,7 @@
                 text: false,
                 icons: {primary: 'ui-icon-seek-prev'}})
               .click(function() {
-                  self.element.weekCalendar('prev');
+                  self.element.weekCalendar('prev'); 
                   return false;
                 });
 
@@ -784,8 +790,15 @@
         }
 
         //first row
+//        calendarHeaderHtml = '<div class=\"ui-widget-content wc-header\">';
+//        calendarHeaderHtml += '<table><tbody><tr><td class=\"wc-time-column-header\"></td>';
+//        for (var i = 1; i <= options.daysToShow; i++) {
+//          calendarHeaderHtml += '<td class=\"wc-day-column-header wc-day-' + i + '\"' + colspan + '></td>';
+//        }
+//        calendarHeaderHtml += '<td class=\"wc-scrollbar-shim\"' + rowspan + '></td></tr>';
+
         calendarHeaderHtml = '<div class=\"ui-widget-content wc-header\">';
-        calendarHeaderHtml += '<table><tbody><tr><td class=\"wc-time-column-header\"></td>';
+        calendarHeaderHtml += '<table><tbody><tr>';
         for (var i = 1; i <= options.daysToShow; i++) {
           calendarHeaderHtml += '<td class=\"wc-day-column-header wc-day-' + i + '\"' + colspan + '></td>';
         }
@@ -857,14 +870,17 @@
         //set the column height
         $calendarContainer.find('.wc-full-height-column').height(options.timeslotHeight * options.timeslotsPerDay);
         //set the timeslot height
-        $calendarContainer.find('.wc-time-slot').height(options.timeslotHeight - 1); //account for border
+//        $calendarContainer.find('.wc-time-slot').height(options.timeslotHeight - 1); //account for border
+        $calendarContainer.find('.wc-time-slot').height(options.timeslotHeight);
+        $calendarContainer.find('.wc-time-slot.wc-hour-end').height(options.timeslotHeight - 1);//account for border
+//        wc-hour-header ui-state-active wc-business-hours
         //init the time row header height
         /**
   TODO    if total height for an hour is less than 11px, there is a display problem.
           Find a way to handle it
         */
         $calendarContainer.find('.wc-time-header-cell').css({
-          height: (options.timeslotHeight * options.timeslotsPerHour) - 11,
+          height: (options.timeslotHeight * options.timeslotsPerHour) - 10,//11
           padding: 5
         });
         //add the user data to every impacted column
@@ -1013,7 +1029,7 @@
         renderRow = '<tr class=\"wc-grid-row-events\">';
         renderRow += '<td class=\"wc-grid-timeslot-header\">';
         for (var i = start; i < end; i++) {
-          var bhClass = (options.businessHours.start <= i && options.businessHours.end > i) ? 'ui-state-active wc-business-hours' : 'ui-state-default';
+          var bhClass = (options.businessHours.start <= i && options.businessHours.end > i) ? 'ui-state-active' : 'ui-state-default';//wc-business-hours after ui-state-active
           renderRow += '<div class=\"wc-hour-header ' + bhClass + '\">';
           if (options.use24Hour) {
             renderRow += '<div class=\"wc-time-header-cell\">' + self._24HourForIndex(i) + '</div>';
