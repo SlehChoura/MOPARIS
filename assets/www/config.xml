@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.hello-world"
+        id        = "com.moparis.application"
         version   = "1.0.0">
 
     <name>MO Paris</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+       MO Paris vous offre un service de Massage bien-être sur-mesure à domicile
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
@@ -39,7 +39,7 @@
 
     <!-- Plugins -->
 
-    <!-- Core plugins  -->
+    <!-- Core plugins  
     
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.console" />
@@ -52,9 +52,9 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-
-
+   
+-->
+ <gap:plugin name="org.apache.cordova.splashscreen" />
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!-- 
@@ -67,10 +67,11 @@
     <icon src="res/drawable-mdpi/ic_launcher.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/drawable-hdpi/ic_launcher.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="res/drawable-xhdpi/ic_launcher.png"  gap:platform="android"    gap:density="xhdpi" />
-    <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+   
+   <icon src="res/ios/57/ic_launcher.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="res/drawable-hdpi/ic_launcher.png"           gap:platform="ios"        width="72" height="72" />
+    <icon src="res/ios/114/ic_launcher.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="res/drawable-xhdpi/ic_launcher.png"         gap:platform="ios"        width="144" height="144" />
    
 
     <!-- Define app splash screen for each platform. -->
